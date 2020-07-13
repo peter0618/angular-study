@@ -1,4 +1,4 @@
-
+<!-- ngIf Examples -->
 <div *ngIf = "false">false</div>
 <div *ngIf = "true">true</div>
 <div *ngIf = "a < b"> a < b</div>
@@ -6,6 +6,7 @@
 <div *ngIf = "str == 'yes'">yes!</div>
 <div *ngIf = "str == 'no'">no!</div>
 
+<!-- ngSwitch Examples -->
 <div class="container" [ngSwitch]="myVar">
   <div *ngSwitchCase="'A'">Var is A</div>
   <div *ngSwitchCase="'B'">Var is B</div>
@@ -31,3 +32,39 @@
 <button (click)="nextChoice()">
   Next Choice
 </button>
+
+<!-- NgStyle Examples -->
+<div [style.background-color]="'yellow'">
+  Uses fixed yellow background
+</div>
+
+<div [ngStyle]="{color: 'white', 'background-color': 'blue'}">
+  Uses fixed white text on blue background
+</div>
+
+<div>
+  <input type="text" name="color" value="{{ color }}" #colorinput>
+</div>
+
+<div>
+  <input type="text" name="fontSize" value="{{ fontSize }}" #fontinput>
+</div>
+
+<button (click)="apply(colorinput.value, fontinput.value)"> Apply Settings</button>
+
+<div>
+  <span [ngStyle]="{color: 'red'}" [style.font-size.em]="fontSize">red text</span>
+</div>
+
+<h4>
+  ngStyle with object property from variable
+</h4>
+
+<div>
+  <span [ngStyle]="{color: color}">{{color}} text</span>
+</div>
+
+<div [style.background-color]="color"
+    style="color: white;">
+  {{ color }} background
+</div>

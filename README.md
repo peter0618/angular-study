@@ -23,3 +23,6 @@ Angular 내장 지시자에 대한 내용을 정리합니다.
   <li *ngSwitchDefault>Default choice</li>
 </ul>
 ```
+
+### ngStyle
+ngStyle을 사용하면, DOM 요소의 CSS 프로퍼티를 동적으로 설정할 수 있습니다.

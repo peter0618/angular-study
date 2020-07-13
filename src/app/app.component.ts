@@ -15,8 +15,16 @@ export class AppComponent {
 
   choice = 1;
 
+  color = 'green';
+  fontSize = 0;
+
   nextChoice() {
     const next = this.choice + 1;
     this.choice = next > 5 ? 1 : next;
+  }
+
+  apply(color: string, fontSize: number): void {
+    this.color = color;
+    this.fontSize = fontSize;
   }
 }
