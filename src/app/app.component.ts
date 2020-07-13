@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-directive-exercise';
+
+  a = 1;
+  b = 2;
+  str = 'no';
+
+  myVar = 'B';
+
+  choice = 1;
+
+  nextChoice() {
+    const next = this.choice + 1;
+    this.choice = next > 5 ? 1 : next;
+  }
 }

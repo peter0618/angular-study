@@ -1,27 +1,25 @@
-# AngularDirectiveExercise
+## Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+Angular 내장 지시자에 대한 내용을 정리합니다.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### *ngIf, *ngSwitch
+###### *ngIf
+조건식이 참이면 해당 태그를 랜더링 합니다.
+```bash
+// 아래 문장은 랜더링 됩니다.
+<div *ngIf = "true">true</div>
+```
+###### *ngSwitch
+다른 프로그래밍 언어에서의 switch 문의 역할과 동일합니다.
+다른점은, 동일한 case를 중복으로 등록하여 표현할 수도 있습니다.
+```bash
+// choice === 2 인 경우 두 개의 항목이 랜더링 됩니다.
+<ul [ngSwitch]="choice">
+  <li *ngSwitchCase="1">First choice</li>
+  <li *ngSwitchCase="2">Second choice</li>
+  <li *ngSwitchCase="3">Third choice</li>
+  <li *ngSwitchCase="4">Fourth choice</li>
+  <li *ngSwitchCase="2">Second choice, again</li>
+  <li *ngSwitchDefault>Default choice</li>
+</ul>
+```
