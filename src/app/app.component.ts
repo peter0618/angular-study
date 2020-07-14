@@ -3,10 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-
   a = 1;
   b = 2;
   str = 'no';
@@ -21,9 +20,9 @@ export class AppComponent {
   cities = ['Miami', 'Sao Paulo', 'New York'];
 
   people = [
-    { name: 'Peter', age: '35', city: 'Seoul'},
-    { name: 'Grace', age: '33', city: 'New York'},
-    { name: 'Joseph', age: '32', city: 'Tokyo'},
+    { name: 'Peter', age: '35', city: 'Seoul' },
+    { name: 'Grace', age: '33', city: 'New York' },
+    { name: 'Joseph', age: '32', city: 'Tokyo' },
   ];
 
   peopleByCity = [
@@ -32,14 +31,14 @@ export class AppComponent {
       people: [
         { name: 'John', age: 12 },
         { name: 'Angel', age: 22 },
-      ]
+      ],
     },
     {
       city: 'Sao Paulo',
       people: [
         { name: 'Anderson', age: 35 },
         { name: 'Felipe', age: 36 },
-      ]
+      ],
     },
   ];
 
