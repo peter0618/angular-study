@@ -36,3 +36,6 @@ ngStyle을 사용하면, DOM 요소의 CSS 프로퍼티를 동적으로 설정�
 </div>
 ```
 위와 같이 for 문의 index에 접근할 수도 있습니다. (index는 0부터 시작합니다.)
+
+### ngNonBindable
+예를 들어 "{{ content }}"라는 글자를 그대로 출력하기 위해서는 해당 영역의 태그에 ngNonBindable 요소를 추가하면 됩니다. (일종의 escape 느낌이네요...)

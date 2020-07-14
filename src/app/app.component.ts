@@ -42,6 +42,8 @@ export class AppComponent {
     },
   ];
 
+  content = '내용';
+
   nextChoice() {
     const next = this.choice + 1;
     this.choice = next > 5 ? 1 : next;
