@@ -7,7 +7,7 @@ import { DirectiveComponent } from './directive/directive.component';
 const routes: Routes = [
   { path: 'form', component: FormComponent },
   { path: 'directive', component: DirectiveComponent },
-  { path: '', redirectTo: '/directive', pathMatch: 'full' },
+  { path: '', redirectTo: '/form', pathMatch: 'full' },
 ];
 
 @NgModule({
